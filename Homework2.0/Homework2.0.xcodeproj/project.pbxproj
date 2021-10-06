@@ -13,6 +13,13 @@
 		4AEF826F270E084F007E0B54 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AEF826D270E084F007E0B54 /* LaunchScreen.storyboard */; };
 		4AEF8279270E096D007E0B54 /* Habibi-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4AEF8277270E096D007E0B54 /* Habibi-Regular.ttf */; };
 		4AEF827A270E096D007E0B54 /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4AEF8278270E096D007E0B54 /* OFL.txt */; };
+		4AEF827E270E0A4F007E0B54 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEF827D270E0A4F007E0B54 /* ProfileViewController.swift */; };
+		4AEF8281270E0B0A007E0B54 /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEF8280270E0B0A007E0B54 /* Localizable.swift */; };
+		4AEF8284270E0BCB007E0B54 /* DisplayDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEF8283270E0BCB007E0B54 /* DisplayDataService.swift */; };
+		4AEF8286270E0C2D007E0B54 /* ProfileDisplayData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEF8285270E0C2D007E0B54 /* ProfileDisplayData.swift */; };
+		4AEF828C270E0F9F007E0B54 /* FontHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEF828B270E0F9F007E0B54 /* FontHelper.swift */; };
+		4AEF828E270E1064007E0B54 /* ImageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEF828D270E1064007E0B54 /* ImageHelper.swift */; };
+		4AEF8292270E1580007E0B54 /* ColorHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEF8291270E1580007E0B54 /* ColorHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +31,13 @@
 		4AEF8270270E084F007E0B54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4AEF8277270E096D007E0B54 /* Habibi-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Habibi-Regular.ttf"; sourceTree = "<group>"; };
 		4AEF8278270E096D007E0B54 /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
+		4AEF827D270E0A4F007E0B54 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		4AEF8280270E0B0A007E0B54 /* Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
+		4AEF8283270E0BCB007E0B54 /* DisplayDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayDataService.swift; sourceTree = "<group>"; };
+		4AEF8285270E0C2D007E0B54 /* ProfileDisplayData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDisplayData.swift; sourceTree = "<group>"; };
+		4AEF828B270E0F9F007E0B54 /* FontHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontHelper.swift; sourceTree = "<group>"; };
+		4AEF828D270E1064007E0B54 /* ImageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageHelper.swift; sourceTree = "<group>"; };
+		4AEF8291270E1580007E0B54 /* ColorHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +70,9 @@
 		4AEF8261270E084B007E0B54 /* Homework2.0 */ = {
 			isa = PBXGroup;
 			children = (
+				4AEF8282270E0B62007E0B54 /* Services */,
+				4AEF827F270E0AF2007E0B54 /* Utilities */,
+				4AEF827B270E0A33007E0B54 /* Modules */,
 				4AEF8276270E096D007E0B54 /* Habibi */,
 				4AEF8262270E084B007E0B54 /* AppDelegate.swift */,
 				4AEF8264270E084B007E0B54 /* SceneDelegate.swift */,
@@ -74,6 +91,42 @@
 			);
 			name = Habibi;
 			path = ../../../../../../Downloads/Habibi;
+			sourceTree = "<group>";
+		};
+		4AEF827B270E0A33007E0B54 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				4AEF827C270E0A3E007E0B54 /* Profile */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		4AEF827C270E0A3E007E0B54 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				4AEF827D270E0A4F007E0B54 /* ProfileViewController.swift */,
+				4AEF8285270E0C2D007E0B54 /* ProfileDisplayData.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		4AEF827F270E0AF2007E0B54 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				4AEF828B270E0F9F007E0B54 /* FontHelper.swift */,
+				4AEF8280270E0B0A007E0B54 /* Localizable.swift */,
+				4AEF828D270E1064007E0B54 /* ImageHelper.swift */,
+				4AEF8291270E1580007E0B54 /* ColorHelper.swift */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		4AEF8282270E0B62007E0B54 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				4AEF8283270E0BCB007E0B54 /* DisplayDataService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,8 +200,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4AEF8284270E0BCB007E0B54 /* DisplayDataService.swift in Sources */,
+				4AEF827E270E0A4F007E0B54 /* ProfileViewController.swift in Sources */,
+				4AEF828C270E0F9F007E0B54 /* FontHelper.swift in Sources */,
+				4AEF8286270E0C2D007E0B54 /* ProfileDisplayData.swift in Sources */,
+				4AEF8292270E1580007E0B54 /* ColorHelper.swift in Sources */,
 				4AEF8263270E084B007E0B54 /* AppDelegate.swift in Sources */,
+				4AEF8281270E0B0A007E0B54 /* Localizable.swift in Sources */,
 				4AEF8265270E084B007E0B54 /* SceneDelegate.swift in Sources */,
+				4AEF828E270E1064007E0B54 /* ImageHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
