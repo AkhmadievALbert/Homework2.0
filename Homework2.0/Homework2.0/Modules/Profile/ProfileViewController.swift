@@ -37,6 +37,7 @@ final class ProfileViewController: UIViewController {
         button.backgroundColor = .clear
         button.layer.cornerRadius = Constants.buttonCornerRadius
         button.layer.borderWidth = Constants.buttonBorderWidth
+        button.layer.borderColor = UIColor.label.cgColor
         
         button.translatesAutoresizingMaskIntoConstraints = false
         button.imageEdgeInsets = .init(top: 0, left: -Constants.buttonInsets, bottom: 0, right: Constants.buttonInsets)
@@ -84,6 +85,14 @@ final class ProfileViewController: UIViewController {
         }
     }
     
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        if previousTraitCollection?.userInterfaceStyle == .dark {
+            logoutButton.layer.borderColor = UIColor.black.cgColor
+        } else {
+            logoutButton.layer.borderColor = UIColor.white.cgColor
+        }
+    }
+    
     // MARK: Private
     
     private func setupNavBar() {
@@ -93,9 +102,11 @@ final class ProfileViewController: UIViewController {
                                                   style: .plain,
                                                   target: self,
                                                   action: #selector(messagesTaped))
-        navigationItem.rightBarButtonItem?.tintColor = .label
         navigationItem.rightBarButtonItem?.setTitleTextAttributes([.font: UIFontMetrics(forTextStyle: .body).scaledFont(for: FontHelper.habibiFont)], for: .normal)
         navigationItem.rightBarButtonItem?.setTitleTextAttributes([.font: UIFontMetrics(forTextStyle: .body).scaledFont(for: FontHelper.habibiFont)], for: .highlighted)
+        navigationItem.backButtonTitle = ""
+        navigationItem.rightBarButtonItem?.tintColor = .label
+        navigationItem.backBarButtonItem?.tintColor = .label
     }
     
     private func setupView() {
@@ -111,7 +122,9 @@ final class ProfileViewController: UIViewController {
     }
     
     @objc private func messagesTaped() {
-        // TODO: In feature/Messages
+        let vc = MessagesTableViewController()
+        vc.configure()
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     @objc private func logoutTaped() {

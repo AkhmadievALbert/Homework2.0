@@ -22,11 +22,17 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         vc.configure()
         
         let navigationController = UINavigationController(rootViewController: vc)
-        navigationController.navigationBar.backgroundColor = ColorHelper.navBarBackground
-        navigationController.navigationBar.largeTitleTextAttributes = [.font: UIFont(name: "Habibi-Regular", size: 34) ?? UIFont(),
+        
+        let navBarAppearance = UINavigationBarAppearance()
+        navBarAppearance.backgroundColor = ColorHelper.navBarBackground
+        navBarAppearance.largeTitleTextAttributes = [.font: UIFont(name: "Habibi-Regular", size: 34) ?? UIFont(),
                                                                        .foregroundColor: UIColor.label]
-        navigationController.navigationBar.titleTextAttributes = [.font: UIFontMetrics(forTextStyle: .body).scaledFont(for:   FontHelper.habibiFont),
+        navBarAppearance.titleTextAttributes = [.font: UIFontMetrics(forTextStyle: .body).scaledFont(for:   FontHelper.habibiFont),
                                                                   .foregroundColor: UIColor.label]
+        navBarAppearance.setBackIndicatorImage(UIImage(named: "back_Icon")?.withTintColor(.label),
+                                               transitionMaskImage: UIImage(named: "back_Icon")?.withTintColor(.label))
+        navigationController.navigationBar.standardAppearance = navBarAppearance
+        navigationController.navigationBar.scrollEdgeAppearance = navBarAppearance
         
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()

@@ -20,6 +20,11 @@
 		4AEF828C270E0F9F007E0B54 /* FontHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEF828B270E0F9F007E0B54 /* FontHelper.swift */; };
 		4AEF828E270E1064007E0B54 /* ImageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEF828D270E1064007E0B54 /* ImageHelper.swift */; };
 		4AEF8292270E1580007E0B54 /* ColorHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEF8291270E1580007E0B54 /* ColorHelper.swift */; };
+		4AEF8295270E1DF0007E0B54 /* MessagesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEF8294270E1DF0007E0B54 /* MessagesTableViewController.swift */; };
+		4AEF8299270E1F16007E0B54 /* MessageHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEF8298270E1F16007E0B54 /* MessageHeader.swift */; };
+		4AEF829B270E2076007E0B54 /* MessagesDisplayData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEF829A270E2076007E0B54 /* MessagesDisplayData.swift */; };
+		4AEF829D270E20DE007E0B54 /* MessageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEF829C270E20DE007E0B54 /* MessageCollectionViewCell.swift */; };
+		4AEF829F270E291A007E0B54 /* MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEF829E270E291A007E0B54 /* MessageTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +43,11 @@
 		4AEF828B270E0F9F007E0B54 /* FontHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontHelper.swift; sourceTree = "<group>"; };
 		4AEF828D270E1064007E0B54 /* ImageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageHelper.swift; sourceTree = "<group>"; };
 		4AEF8291270E1580007E0B54 /* ColorHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorHelper.swift; sourceTree = "<group>"; };
+		4AEF8294270E1DF0007E0B54 /* MessagesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesTableViewController.swift; sourceTree = "<group>"; };
+		4AEF8298270E1F16007E0B54 /* MessageHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageHeader.swift; sourceTree = "<group>"; };
+		4AEF829A270E2076007E0B54 /* MessagesDisplayData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesDisplayData.swift; sourceTree = "<group>"; };
+		4AEF829C270E20DE007E0B54 /* MessageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCollectionViewCell.swift; sourceTree = "<group>"; };
+		4AEF829E270E291A007E0B54 /* MessageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +106,7 @@
 		4AEF827B270E0A33007E0B54 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				4AEF8293270E1DDB007E0B54 /* Messages */,
 				4AEF827C270E0A3E007E0B54 /* Profile */,
 			);
 			path = Modules;
@@ -127,6 +138,18 @@
 				4AEF8283270E0BCB007E0B54 /* DisplayDataService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		4AEF8293270E1DDB007E0B54 /* Messages */ = {
+			isa = PBXGroup;
+			children = (
+				4AEF8294270E1DF0007E0B54 /* MessagesTableViewController.swift */,
+				4AEF8298270E1F16007E0B54 /* MessageHeader.swift */,
+				4AEF829A270E2076007E0B54 /* MessagesDisplayData.swift */,
+				4AEF829C270E20DE007E0B54 /* MessageCollectionViewCell.swift */,
+				4AEF829E270E291A007E0B54 /* MessageTableViewCell.swift */,
+			);
+			path = Messages;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,13 +223,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4AEF8295270E1DF0007E0B54 /* MessagesTableViewController.swift in Sources */,
 				4AEF8284270E0BCB007E0B54 /* DisplayDataService.swift in Sources */,
 				4AEF827E270E0A4F007E0B54 /* ProfileViewController.swift in Sources */,
 				4AEF828C270E0F9F007E0B54 /* FontHelper.swift in Sources */,
+				4AEF829D270E20DE007E0B54 /* MessageCollectionViewCell.swift in Sources */,
 				4AEF8286270E0C2D007E0B54 /* ProfileDisplayData.swift in Sources */,
 				4AEF8292270E1580007E0B54 /* ColorHelper.swift in Sources */,
+				4AEF829F270E291A007E0B54 /* MessageTableViewCell.swift in Sources */,
 				4AEF8263270E084B007E0B54 /* AppDelegate.swift in Sources */,
 				4AEF8281270E0B0A007E0B54 /* Localizable.swift in Sources */,
+				4AEF829B270E2076007E0B54 /* MessagesDisplayData.swift in Sources */,
+				4AEF8299270E1F16007E0B54 /* MessageHeader.swift in Sources */,
 				4AEF8265270E084B007E0B54 /* SceneDelegate.swift in Sources */,
 				4AEF828E270E1064007E0B54 /* ImageHelper.swift in Sources */,
 			);
