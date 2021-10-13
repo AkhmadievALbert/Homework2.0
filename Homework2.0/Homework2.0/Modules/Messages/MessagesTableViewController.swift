@@ -27,7 +27,6 @@ final class MessagesTableViewController: UIViewController {
         let tableView = UITableView()
         tableView.separatorStyle = .singleLine
         tableView.register(MessageTableViewCell.self, forCellReuseIdentifier: Constants.forCellReuseIdentifier)
-        tableView.register(MessageHeader.self, forHeaderFooterViewReuseIdentifier: Constants.forHeaderFooterViewReuseIdentifier)
         tableView.tableFooterView = UIView()
         return tableView
     }()
@@ -43,26 +42,20 @@ final class MessagesTableViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.rowHeight = UITableView.automaticDimension
-        
-        setupView()
+
         setupNavbar()
+        setupView()
     }
     
     
     // MARK: Public
     
     func configure() {
-        DisplayDataService.default.displayDataForMessagesView { [weak self] result in
+        DisplayDataService.default.displayDataForMessagesView { [weak self] displayData in
             guard let self = self else { return }
-            switch result {
             
-            case .success(let displayData):
-                self.tableMessages = displayData.messages
-                self.tableView.reloadData()
-                
-            case .failure(let error):
-                print(error)
-            }
+            self.tableMessages = displayData.messages
+            self.tableView.reloadData()
         }
     }
     
@@ -84,10 +77,11 @@ final class MessagesTableViewController: UIViewController {
     private func setupNavbar() {
         navigationItem.largeTitleDisplayMode = .never
         navigationItem.title = Localizable.messagesTitle
+        navigationItem.backButtonTitle = ""
         searchController.obscuresBackgroundDuringPresentation = false
         let searchPlaceholderMutableString = NSMutableAttributedString(string: Localizable.messagesSearchPlaceholder,
                                                                        attributes: [NSAttributedString.Key.font : UIFontMetrics(forTextStyle: .body).scaledFont(for: FontHelper.habibiFont),
-                                                                                    .foregroundColor: ColorHelper.messageDescriptionColor ?? .label])
+                                                                                    .foregroundColor: ColorHelper.messageDescriptionColor])
         searchController.searchBar.searchTextField.attributedPlaceholder = searchPlaceholderMutableString
         searchController.hidesNavigationBarDuringPresentation = false
         navigationItem.searchController = searchController
@@ -126,14 +120,8 @@ extension MessagesTableViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-    }
-    
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        guard let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: Constants.forHeaderFooterViewReuseIdentifier) as? MessageHeader
-        else {
-            return UIView()
-        }
-        header.configure(pinned: tableMessages)
-        return header
+        let chatViewController = ChatViewController()
+        chatViewController.configure()
+        navigationController?.pushViewController(chatViewController, animated: true)
     }
 }

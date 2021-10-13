@@ -25,4 +25,12 @@ enum Localizable {
     static let messagesSearchPlaceholder = "Who do you want to chat with?"
     /// MESSAGES
     static let messagesTitle = "MESSAGES"
+    
+    
+    // MARK: Chat
+
+    /// Jessica Thompson
+    static let chatTitle = "Jessica Thompson"
+    /// Type your message here...
+    static let chatTextFieldPlaceholder = "Type your message here..."
 }
