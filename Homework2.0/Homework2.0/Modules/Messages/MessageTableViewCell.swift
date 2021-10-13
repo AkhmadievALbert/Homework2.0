@@ -12,10 +12,12 @@ final class MessageTableViewCell: UITableViewCell {
     // MARK: Private structures
     
     private struct Constants {
+        static let width: CGFloat = 48
+        static let height: CGFloat = 16
         static let labelLeading: CGFloat = 8
         static let imageWidthHeight: CGFloat = 40
         static let descriptionLabelTop: CGFloat = 4
-        static let contentTopLeadingBottomTrailing: CGFloat = 24
+        static let contentInset: CGFloat = 24
     }
     
     
@@ -44,6 +46,7 @@ final class MessageTableViewCell: UITableViewCell {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFontMetrics(forTextStyle: .body).scaledFont(for: FontHelper.habibiFont)
         label.adjustsFontForContentSizeCategory = true
+        label.setContentHuggingPriority(.defaultLow, for: .horizontal)
         return label
     }()
     private let descriptionLabel: UILabel = {
@@ -109,24 +112,28 @@ final class MessageTableViewCell: UITableViewCell {
         avatarImageView.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
         avatarImageView.widthAnchor.constraint(equalToConstant: Constants.imageWidthHeight).isActive = true
         avatarImageView.heightAnchor.constraint(equalToConstant: Constants.imageWidthHeight).isActive = true
-        avatarImageView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: Constants.contentTopLeadingBottomTrailing).isActive = true
+        avatarImageView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: Constants.contentInset).isActive = true
         layoutIfNeeded()
         avatarImageView.layer.cornerRadius = avatarImageView.frame.size.width / 2
-        
-        let stackView = UIStackView(arrangedSubviews: [usernameLabel, descriptionLabel])
-        stackView.axis = .vertical
-        stackView.spacing = Constants.descriptionLabelTop
-        
-        self.addSubview(stackView)
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        stackView.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
-        stackView.leadingAnchor.constraint(equalTo: avatarImageView.trailingAnchor, constant: Constants.labelLeading).isActive = true
-        stackView.topAnchor.constraint(greaterThanOrEqualTo: self.topAnchor, constant: Constants.contentTopLeadingBottomTrailing).isActive = true
-        stackView.bottomAnchor.constraint(greaterThanOrEqualTo: self.bottomAnchor, constant: -Constants.contentTopLeadingBottomTrailing).isActive = true
-        
-        
+
         self.addSubview(dateLabel)
-        dateLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: Constants.contentTopLeadingBottomTrailing).isActive = true
-        dateLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -Constants.contentTopLeadingBottomTrailing).isActive = true
+        dateLabel.setContentHuggingPriority(.defaultHigh, for: .horizontal)
+        dateLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: Constants.contentInset).isActive = true
+        dateLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -Constants.contentInset).isActive = true
+
+        self.addSubview(usernameLabel)
+        usernameLabel.setContentHuggingPriority(.defaultLow, for: .horizontal)
+        usernameLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: Constants.contentInset).isActive = true
+        usernameLabel.heightAnchor.constraint(greaterThanOrEqualToConstant: Constants.height).isActive = true
+        usernameLabel.leadingAnchor.constraint(equalTo: avatarImageView.trailingAnchor, constant: Constants.labelLeading).isActive = true
+        usernameLabel.trailingAnchor.constraint(greaterThanOrEqualTo: dateLabel.leadingAnchor, constant: -Constants.labelLeading).isActive = true
+
+        self.addSubview(descriptionLabel)
+        descriptionLabel.setContentHuggingPriority(.defaultHigh, for: .vertical)
+        descriptionLabel.topAnchor.constraint(equalTo: usernameLabel.bottomAnchor, constant: Constants.descriptionLabelTop).isActive = true
+        descriptionLabel.leadingAnchor.constraint(equalTo: avatarImageView.trailingAnchor, constant: Constants.labelLeading).isActive = true
+        descriptionLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -Constants.contentInset).isActive = true
+        descriptionLabel.heightAnchor.constraint(greaterThanOrEqualToConstant: Constants.height).isActive = true
+        descriptionLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -Constants.contentInset).isActive = true
     }
 }

@@ -9,4 +9,5 @@ import UIKit
 
 enum ImageHelper {
     static let arrowBack = UIImage(named: "arrow-back")
+    static let sendImage = UIImage(named: "send-button")
 }

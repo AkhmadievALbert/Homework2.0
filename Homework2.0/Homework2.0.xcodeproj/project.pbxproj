@@ -3,16 +3,23 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A40091F271698DC0003EEDC /* Habibi-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4A40091D271698DC0003EEDC /* Habibi-Regular.ttf */; };
+		4A400920271698DC0003EEDC /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4A40091E271698DC0003EEDC /* OFL.txt */; };
+		4A40092227169D3E0003EEDC /* ChatTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A40092127169D3E0003EEDC /* ChatTextField.swift */; };
+		4A4009262716AF0D0003EEDC /* DateStringFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4009252716AF0D0003EEDC /* DateStringFormatter.swift */; };
+		4A43A9B1271443A00076A5C9 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 4A43A9B0271443A00076A5C9 /* SnapKit */; };
+		4A43A9B4271443D20076A5C9 /* ChatMessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A43A9B3271443D20076A5C9 /* ChatMessageTableViewCell.swift */; };
+		4A43A9B6271472730076A5C9 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A43A9B5271472730076A5C9 /* ChatViewController.swift */; };
+		4A43A9B8271472DA0076A5C9 /* ChatDisplayData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A43A9B7271472DA0076A5C9 /* ChatDisplayData.swift */; };
+		4A43A9BA27147A630076A5C9 /* ChatHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A43A9B927147A630076A5C9 /* ChatHeaderView.swift */; };
 		4AEF8263270E084B007E0B54 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEF8262270E084B007E0B54 /* AppDelegate.swift */; };
 		4AEF8265270E084B007E0B54 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEF8264270E084B007E0B54 /* SceneDelegate.swift */; };
 		4AEF826C270E084F007E0B54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4AEF826B270E084F007E0B54 /* Assets.xcassets */; };
 		4AEF826F270E084F007E0B54 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AEF826D270E084F007E0B54 /* LaunchScreen.storyboard */; };
-		4AEF8279270E096D007E0B54 /* Habibi-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4AEF8277270E096D007E0B54 /* Habibi-Regular.ttf */; };
-		4AEF827A270E096D007E0B54 /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4AEF8278270E096D007E0B54 /* OFL.txt */; };
 		4AEF827E270E0A4F007E0B54 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEF827D270E0A4F007E0B54 /* ProfileViewController.swift */; };
 		4AEF8281270E0B0A007E0B54 /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEF8280270E0B0A007E0B54 /* Localizable.swift */; };
 		4AEF8284270E0BCB007E0B54 /* DisplayDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEF8283270E0BCB007E0B54 /* DisplayDataService.swift */; };
@@ -21,21 +28,25 @@
 		4AEF828E270E1064007E0B54 /* ImageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEF828D270E1064007E0B54 /* ImageHelper.swift */; };
 		4AEF8292270E1580007E0B54 /* ColorHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEF8291270E1580007E0B54 /* ColorHelper.swift */; };
 		4AEF8295270E1DF0007E0B54 /* MessagesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEF8294270E1DF0007E0B54 /* MessagesTableViewController.swift */; };
-		4AEF8299270E1F16007E0B54 /* MessageHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEF8298270E1F16007E0B54 /* MessageHeader.swift */; };
 		4AEF829B270E2076007E0B54 /* MessagesDisplayData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEF829A270E2076007E0B54 /* MessagesDisplayData.swift */; };
-		4AEF829D270E20DE007E0B54 /* MessageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEF829C270E20DE007E0B54 /* MessageCollectionViewCell.swift */; };
 		4AEF829F270E291A007E0B54 /* MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEF829E270E291A007E0B54 /* MessageTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4A40091D271698DC0003EEDC /* Habibi-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Habibi-Regular.ttf"; sourceTree = "<group>"; };
+		4A40091E271698DC0003EEDC /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
+		4A40092127169D3E0003EEDC /* ChatTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTextField.swift; sourceTree = "<group>"; };
+		4A4009252716AF0D0003EEDC /* DateStringFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateStringFormatter.swift; sourceTree = "<group>"; };
+		4A43A9B3271443D20076A5C9 /* ChatMessageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessageTableViewCell.swift; sourceTree = "<group>"; };
+		4A43A9B5271472730076A5C9 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		4A43A9B7271472DA0076A5C9 /* ChatDisplayData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatDisplayData.swift; sourceTree = "<group>"; };
+		4A43A9B927147A630076A5C9 /* ChatHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatHeaderView.swift; sourceTree = "<group>"; };
 		4AEF825F270E084B007E0B54 /* Homework2.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Homework2.0.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AEF8262270E084B007E0B54 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4AEF8264270E084B007E0B54 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		4AEF826B270E084F007E0B54 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4AEF826E270E084F007E0B54 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4AEF8270270E084F007E0B54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4AEF8277270E096D007E0B54 /* Habibi-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Habibi-Regular.ttf"; sourceTree = "<group>"; };
-		4AEF8278270E096D007E0B54 /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
 		4AEF827D270E0A4F007E0B54 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		4AEF8280270E0B0A007E0B54 /* Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
 		4AEF8283270E0BCB007E0B54 /* DisplayDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayDataService.swift; sourceTree = "<group>"; };
@@ -44,9 +55,7 @@
 		4AEF828D270E1064007E0B54 /* ImageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageHelper.swift; sourceTree = "<group>"; };
 		4AEF8291270E1580007E0B54 /* ColorHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorHelper.swift; sourceTree = "<group>"; };
 		4AEF8294270E1DF0007E0B54 /* MessagesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesTableViewController.swift; sourceTree = "<group>"; };
-		4AEF8298270E1F16007E0B54 /* MessageHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageHeader.swift; sourceTree = "<group>"; };
 		4AEF829A270E2076007E0B54 /* MessagesDisplayData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesDisplayData.swift; sourceTree = "<group>"; };
-		4AEF829C270E20DE007E0B54 /* MessageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCollectionViewCell.swift; sourceTree = "<group>"; };
 		4AEF829E270E291A007E0B54 /* MessageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -55,12 +64,34 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A43A9B1271443A00076A5C9 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4A40091C271698DC0003EEDC /* Habibi */ = {
+			isa = PBXGroup;
+			children = (
+				4A40091D271698DC0003EEDC /* Habibi-Regular.ttf */,
+				4A40091E271698DC0003EEDC /* OFL.txt */,
+			);
+			path = Habibi;
+			sourceTree = "<group>";
+		};
+		4A43A9B2271443AB0076A5C9 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				4A43A9B3271443D20076A5C9 /* ChatMessageTableViewCell.swift */,
+				4A43A9B5271472730076A5C9 /* ChatViewController.swift */,
+				4A43A9B7271472DA0076A5C9 /* ChatDisplayData.swift */,
+				4A43A9B927147A630076A5C9 /* ChatHeaderView.swift */,
+				4A40092127169D3E0003EEDC /* ChatTextField.swift */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
 		4AEF8256270E084B007E0B54 = {
 			isa = PBXGroup;
 			children = (
@@ -80,10 +111,10 @@
 		4AEF8261270E084B007E0B54 /* Homework2.0 */ = {
 			isa = PBXGroup;
 			children = (
+				4A40091C271698DC0003EEDC /* Habibi */,
 				4AEF8282270E0B62007E0B54 /* Services */,
 				4AEF827F270E0AF2007E0B54 /* Utilities */,
 				4AEF827B270E0A33007E0B54 /* Modules */,
-				4AEF8276270E096D007E0B54 /* Habibi */,
 				4AEF8262270E084B007E0B54 /* AppDelegate.swift */,
 				4AEF8264270E084B007E0B54 /* SceneDelegate.swift */,
 				4AEF826B270E084F007E0B54 /* Assets.xcassets */,
@@ -93,19 +124,10 @@
 			path = Homework2.0;
 			sourceTree = "<group>";
 		};
-		4AEF8276270E096D007E0B54 /* Habibi */ = {
-			isa = PBXGroup;
-			children = (
-				4AEF8277270E096D007E0B54 /* Habibi-Regular.ttf */,
-				4AEF8278270E096D007E0B54 /* OFL.txt */,
-			);
-			name = Habibi;
-			path = ../../../../../../Downloads/Habibi;
-			sourceTree = "<group>";
-		};
 		4AEF827B270E0A33007E0B54 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				4A43A9B2271443AB0076A5C9 /* Chat */,
 				4AEF8293270E1DDB007E0B54 /* Messages */,
 				4AEF827C270E0A3E007E0B54 /* Profile */,
 			);
@@ -128,6 +150,7 @@
 				4AEF8280270E0B0A007E0B54 /* Localizable.swift */,
 				4AEF828D270E1064007E0B54 /* ImageHelper.swift */,
 				4AEF8291270E1580007E0B54 /* ColorHelper.swift */,
+				4A4009252716AF0D0003EEDC /* DateStringFormatter.swift */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -144,9 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				4AEF8294270E1DF0007E0B54 /* MessagesTableViewController.swift */,
-				4AEF8298270E1F16007E0B54 /* MessageHeader.swift */,
 				4AEF829A270E2076007E0B54 /* MessagesDisplayData.swift */,
-				4AEF829C270E20DE007E0B54 /* MessageCollectionViewCell.swift */,
 				4AEF829E270E291A007E0B54 /* MessageTableViewCell.swift */,
 			);
 			path = Messages;
@@ -168,6 +189,9 @@
 			dependencies = (
 			);
 			name = Homework2.0;
+			packageProductDependencies = (
+				4A43A9B0271443A00076A5C9 /* SnapKit */,
+			);
 			productName = Homework2.0;
 			productReference = 4AEF825F270E084B007E0B54 /* Homework2.0.app */;
 			productType = "com.apple.product-type.application";
@@ -195,6 +219,9 @@
 				Base,
 			);
 			mainGroup = 4AEF8256270E084B007E0B54;
+			packageReferences = (
+				4A43A9AF271443A00076A5C9 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 4AEF8260270E084B007E0B54 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -211,8 +238,8 @@
 			files = (
 				4AEF826F270E084F007E0B54 /* LaunchScreen.storyboard in Resources */,
 				4AEF826C270E084F007E0B54 /* Assets.xcassets in Resources */,
-				4AEF827A270E096D007E0B54 /* OFL.txt in Resources */,
-				4AEF8279270E096D007E0B54 /* Habibi-Regular.ttf in Resources */,
+				4A400920271698DC0003EEDC /* OFL.txt in Resources */,
+				4A40091F271698DC0003EEDC /* Habibi-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,17 +252,21 @@
 			files = (
 				4AEF8295270E1DF0007E0B54 /* MessagesTableViewController.swift in Sources */,
 				4AEF8284270E0BCB007E0B54 /* DisplayDataService.swift in Sources */,
+				4A43A9B6271472730076A5C9 /* ChatViewController.swift in Sources */,
+				4A40092227169D3E0003EEDC /* ChatTextField.swift in Sources */,
 				4AEF827E270E0A4F007E0B54 /* ProfileViewController.swift in Sources */,
 				4AEF828C270E0F9F007E0B54 /* FontHelper.swift in Sources */,
-				4AEF829D270E20DE007E0B54 /* MessageCollectionViewCell.swift in Sources */,
 				4AEF8286270E0C2D007E0B54 /* ProfileDisplayData.swift in Sources */,
 				4AEF8292270E1580007E0B54 /* ColorHelper.swift in Sources */,
+				4A4009262716AF0D0003EEDC /* DateStringFormatter.swift in Sources */,
 				4AEF829F270E291A007E0B54 /* MessageTableViewCell.swift in Sources */,
 				4AEF8263270E084B007E0B54 /* AppDelegate.swift in Sources */,
 				4AEF8281270E0B0A007E0B54 /* Localizable.swift in Sources */,
 				4AEF829B270E2076007E0B54 /* MessagesDisplayData.swift in Sources */,
-				4AEF8299270E1F16007E0B54 /* MessageHeader.swift in Sources */,
 				4AEF8265270E084B007E0B54 /* SceneDelegate.swift in Sources */,
+				4A43A9B4271443D20076A5C9 /* ChatMessageTableViewCell.swift in Sources */,
+				4A43A9BA27147A630076A5C9 /* ChatHeaderView.swift in Sources */,
+				4A43A9B8271472DA0076A5C9 /* ChatDisplayData.swift in Sources */,
 				4AEF828E270E1064007E0B54 /* ImageHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -428,6 +459,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4A43A9AF271443A00076A5C9 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4A43A9B0271443A00076A5C9 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4A43A9AF271443A00076A5C9 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4AEF8257270E084B007E0B54 /* Project object */;
 }

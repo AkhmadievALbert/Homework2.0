@@ -72,16 +72,10 @@ final class ProfileViewController: UIViewController {
     // MARK: Public
     
     func configure() {
-        DisplayDataService.default.displayDataForProfileView { [weak self] result in
+        DisplayDataService.default.displayDataForProfileView { [weak self] displayData in
             guard let self = self else { return }
-            switch result {
-            case .success(let displayData):
-                self.navigationItem.title = displayData.username
-                self.cityLabel.text = displayData.city
-                
-            case .failure(let error):
-                print(error)
-            }
+            self.navigationItem.title = displayData.username
+            self.cityLabel.text = displayData.city
         }
     }
     
